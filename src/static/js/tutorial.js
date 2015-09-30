@@ -450,10 +450,11 @@ $('#link13').on('click', function(e){
 $('#link14').on('click', function(e){
 	
 	var query = $('#query14').val();
-	var endpoint = 'http://localhost:5820/tutorial/query';
+	var endpoint = 'http://localhost:5820/Sushi/query';
 	var format = 'JSON';
+	var inference = $('#infinit').prop('checked')
 	
-	$.get('/sparql',data={'endpoint': endpoint, 'query': query, 'format': format}, function(json){
+	$.get('/sparql',data={'endpoint': endpoint, 'query': query, 'format': format, 'reasoning': inference}, function(json){
 		console.log(json);
 		
 		try {
